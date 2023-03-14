@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +8,7 @@
 </head>
 <body>
     <?php
-require_once('./meniu.php');
+        require_once('./meniu.php');
     ?>
-    <a href=""></a>
 </body>
 </html>

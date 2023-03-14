@@ -4,7 +4,7 @@ if(isset($_GET['empty_fields']) && $_GET['empty_fields'] == 1) {
 }
 
 if(isset($_GET['success']) && $_GET['success'] == 1) {
-    echo "<div style=\"padding: 20px; color: red;\">Vartotojas sukurtas sekmingai</div>";
+    echo "<div style=\"padding: 20px; color: green;\">Vartotojas sukurtas sekmingai</div>";
 }
 ?>
 <!DOCTYPE html>
@@ -26,12 +26,12 @@ require_once('./meniu.php');
         <input type="text" name="name">
         </div>
 <div>
-        <label for="name">Surname:</label>
-        <input type="text" name="name">
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname">
     </div>
 <div>        
-        <label for="name">Personal ID:</label>
-        <input type="text" name="name">
+        <label for="personal_id">Personal ID:</label>
+        <input type="text" name="personal_id">
     </div>
 <div>
         <input type="submit" name="create" value="Sukurti">
