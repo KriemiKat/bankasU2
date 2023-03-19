@@ -1,12 +1,5 @@
 <?php
-session_start();
 
-if (isset($_SESSION['msg'])){
-    $msg = $_SESSION['msg'];
-    $color = $_SESSION['color'];
-    unset ($_SESSION['msg']);
-    echo '<h2 style= "color:'. $color .'">' .$msg. '</h2>';
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
