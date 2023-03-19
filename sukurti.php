@@ -1,10 +1,11 @@
 <?php
-if(isset($_GET['empty_fields']) && $_GET['empty_fields'] == 1) {
-    echo "<div style=\"padding: 20px; color: red;\">Prasome uzpildyti visus laukus</div>";
-}
+session_start();
 
-if(isset($_GET['success']) && $_GET['success'] == 1) {
-    echo "<div style=\"padding: 20px; color: green;\">Vartotojas sukurtas sekmingai</div>";
+if (isset($_SESSION['msg'])){
+    $msg = $_SESSION['msg'];
+    $color = $_SESSION['color'];
+    unset ($_SESSION['msg']);
+    echo '<h2 style= "color:'. $color .'">' .$msg. '</h2>';
 }
 ?>
 <!DOCTYPE html>

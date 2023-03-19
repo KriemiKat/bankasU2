@@ -1,6 +1,10 @@
 <?php
 
+session_start();
+
 if($_POST['name'] == '' || $_POST['surname'] == '' || $_POST['Personal ID'] == '') {
+    $_SESSION['msg'] = 'Prasome ivesti teisingus duomenis';
+    $_SESSION['color'] = 'red';
     header('location: http://localhost/bankasU2/sukurti.php?empty_fields=1');
 }
 
@@ -21,5 +25,6 @@ $user = [
 $users[] = $user;
 
 file_put_contents('users.json', json_encode($users));
-
+$_SESSION['msg'] = 'Vartotojas sukurtas teisingai';
+$_SESSION['color'] = 'green';
 header('Location: http://localhost/bankasU2/sukurti.php?success=1');

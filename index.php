@@ -16,7 +16,11 @@
 </head>
 <body>
     <?php 
-        require_once('./menu.php');
+        require_once('./meniu.php');
+        require_once('./users.json');
+        $users = json_decode(file_get_contents('users.json'));
+        var_dump($users);
+        die;
     ?>
 </body>
 </html>
