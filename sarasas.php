@@ -20,7 +20,7 @@ if (isset($_SESSION['msg'])) {
 }
 ?>
     <?php 
-        require_once('./menu.php');
+        require_once('./meniu.php');
         $users = json_decode(file_get_contents('./users.json'));
         function sortByName($a, $b) {
             return strcmp($a->surname, $b->surname);
