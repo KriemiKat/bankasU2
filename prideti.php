@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-require_once('./meniu.php');
+    <?php 
+        require_once('./menu.php');
     ?>
-    <a href=""></a>
+    <form action="pridejimas.php" method="post">
+        <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
+        <input type="text" name="funds">
+        <input type="submit" value="prideti">
+    </form>
 </body>
 </html>
