@@ -20,7 +20,7 @@ foreach ($users as &$user) {
         $users2[] = $user;
     } else {
         if($user->funds > 0) {
-            $_SESSION['msg'] = 'Negalima istrinti - saskaitoje yra lesu';
+            $_SESSION['msg'] = 'Negalima ištrinti - sąskaitoje yra lėšų';
             $_SESSION['color'] = 'red';
             header('Location: http://localhost/bankasu2/sarasas.php');
             die;
@@ -29,6 +29,6 @@ foreach ($users as &$user) {
 }
 
 file_put_contents('users.json', json_encode( $users2));
-$_SESSION['msg'] = 'Vartotojas istrintas sekmingai';
+$_SESSION['msg'] = 'Vartotojas ištrintas sėkmingai';
 $_SESSION['color'] = 'green';
 header('Location: http://localhost/bankasu2/sarasas.php');

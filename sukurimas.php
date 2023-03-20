@@ -38,6 +38,6 @@ file_put_contents('id.json', ++$id);
 $users[] = $user;
 
 file_put_contents('users.json', json_encode( $users));
-$_SESSION['msg'] = 'Vartotojas sukurtas sekmingai';
+$_SESSION['msg'] = 'Vartotojas sukurtas sėkmingai';
 $_SESSION['color'] = 'green';
 header('Location: http://localhost/bankasu2/sukurti.php');
