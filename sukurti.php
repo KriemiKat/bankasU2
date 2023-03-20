@@ -32,7 +32,7 @@ if (isset($_SESSION['msg'])) {
     <?php 
         require_once('./meniu.php');
     ?>
-    <form action="sukurimas.php" method="post" style=">
+    <form action="sukurimas.php" method="post">
         <div>
             <label for="name">Vardas:</label>
             <input type="text" name="name">

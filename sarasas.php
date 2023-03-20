@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: #73b1c1;>
+<body style="background-color: #73b1c1;">
 <?php
 
 session_start();
@@ -16,7 +16,7 @@ if (isset($_SESSION['msg'])) {
     $color = $_SESSION['color'];
     unset($_SESSION['msg']);
     unset($_SESSION['color']);
-    echo '<h2 style="color:'. $color .'">' . $msg . '</h2>';
+    echo '<h2 style="color:'. $color .';">' . $msg . '</h2>';
 }
 ?>
     <?php 
@@ -29,7 +29,7 @@ if (isset($_SESSION['msg'])) {
         usort($users, 'sortByName');
 
         ?>
-        <table class="pure-table pure-table-bordered">
+        <table>
             <tr>
                 <th>Vardas</th>
                 <th>Pavardė</th>
