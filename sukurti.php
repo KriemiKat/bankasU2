@@ -21,16 +21,18 @@ if (isset($_SESSION['msg'])) {
     <title>Document</title>
     <style>
         div {
-            padding: 7px;
-            padding-left: 20px;
+            padding: 12px;
+            padding-left: 100px;
+            font: optional;
+            Font-family: Cambria, Georgia, serif;
         }
     </style>
 </head>
-<body>
+<body style="background-color: #73b1c1; ">
     <?php 
         require_once('./meniu.php');
     ?>
-    <form action="sukurimas.php" method="post">
+    <form action="sukurimas.php" method="post" style=">
         <div>
             <label for="name">Vardas:</label>
             <input type="text" name="name">
@@ -44,7 +46,7 @@ if (isset($_SESSION['msg'])) {
             <input type="text" name="personal_id">
         </div>
         <div>
-            <input type="submit" name="create" value="Sukurti">
+            <input type="submit" name="create" value="Sukurti" style="background-color:#36626a">
         </div>
     </form>
 </body>
