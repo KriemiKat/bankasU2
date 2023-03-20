@@ -1,12 +1,9 @@
 <?php
 
-// var_dump($_POST);
-// die;
-
 session_start();
 
 if(!isset($_POST['id'])) {
-    $_SESSION['msg'] = 'Atsiprasome - vartotojo istrinti nepavyko';
+    $_SESSION['msg'] = 'Atsiprašome - vartotojo ištrinti nepavyko';
     $_SESSION['color'] = 'red';
     header('Location: http://localhost/bankasu2/sarasas.php');
     die;

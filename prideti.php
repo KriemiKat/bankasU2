@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: http://localhost/bankasu2/login.php');
+    die;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #73b1c1; Font-family: Cambria, Georgia, serif;">
     <?php 
         require_once('./meniu.php');
     ?>

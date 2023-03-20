@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: #73b1c1;">
+<body style="background-color: #73b1c1; Font-family: Cambria, Georgia, serif;">
 <?php
 
 session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: http://localhost/bankasu2/login.php');
+    die;
+}
 
 if (isset($_SESSION['msg'])) {
     $msg = $_SESSION['msg'];
@@ -22,6 +26,7 @@ if (isset($_SESSION['msg'])) {
     <?php 
         require_once('./meniu.php');
         $users = json_decode(file_get_contents('./users.json'));
+        if(!$users) die;
         function sortByName($a, $b) {
             return strcmp($a->surname, $b->surname);
         }
@@ -31,6 +36,7 @@ if (isset($_SESSION['msg'])) {
         ?>
         <table>
             <tr>
+                <th>Sąskaitos Nr.</th>
                 <th>Vardas</th>
                 <th>Pavardė</th>
                 <th>Asmens kodas</th>
@@ -43,6 +49,7 @@ if (isset($_SESSION['msg'])) {
         if(!$users) die;
         foreach($users as $user) {
             echo '<tr>';
+            echo '<td>' . $user->account_no . '</td>';
             echo '<td>' . $user->name . '</td>';
             echo '<td>' . $user->surname . '</td>';
             echo '<td>' . $user->personal_id . '</td>';
@@ -59,7 +66,7 @@ if (isset($_SESSION['msg'])) {
             ?>
             <form action="./istrynimas.php" method="post">
                 <input type="hidden" name="id" value="<?= $user->id; ?>">
-                <input type="submit" value="istrinti">
+                <input type="submit" style="background-color:red" value="ištrinti">
             </form>
             <?php
             echo '</td>';
