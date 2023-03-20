@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-        require_once('./menu.php');
+        require_once('./meniu.php');
     ?>
     <form action="atemimas.php" method="post">
         <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
