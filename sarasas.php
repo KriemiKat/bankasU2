@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #73b1c1;>
 <?php
 
 session_start();
@@ -29,7 +29,7 @@ if (isset($_SESSION['msg'])) {
         usort($users, 'sortByName');
 
         ?>
-        <table>
+        <table class="pure-table pure-table-bordered">
             <tr>
                 <th>Vardas</th>
                 <th>Pavardė</th>

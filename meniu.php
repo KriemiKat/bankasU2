@@ -7,7 +7,6 @@
     <title>Document</title>
     <style>
         a {
-            padding-left: 20px;
             font-weight: bold;
             padding-left: 100px;
         }

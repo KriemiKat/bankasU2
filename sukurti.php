@@ -22,7 +22,7 @@ if (isset($_SESSION['msg'])) {
     <style>
         div {
             padding: 12px;
-            padding-left: 100px;
+            margin-left: 100px;
             font: optional;
             Font-family: Cambria, Georgia, serif;
         }
