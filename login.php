@@ -33,14 +33,14 @@ if(isset($_POST) && !empty($_POST)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #73b1c1; Font-family: Cambria, Georgia, serif; text-align: center">
     <form action="" method="post">
         <div>
             <label for="name">Prisijungimo vardas:</label>
             <input type="text" name="name">
         </div>
         <div>
-            <label for="password">Slaptazodis:</label>
+            <label for="password">Slaptažodis:</label>
             <input type="text" name="password">
         </div>
         <div>

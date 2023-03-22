@@ -41,9 +41,9 @@ if (isset($_SESSION['msg'])) {
                 <th>Pavardė</th>
                 <th>Asmens kodas</th>
                 <th>Lėšos</th>
-                <th>Pridėjimas</th>
-                <th>Atėmimas</th>
-                <th>Ištrynimas</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
         <?php 
         if(!$users) die;
